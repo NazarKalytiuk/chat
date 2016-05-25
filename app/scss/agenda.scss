@@ -1,0 +1,350 @@
+// @section agenda
+.agenda
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 347px;
+    margin: 20px 2.2% 20px 0;
+    padding: 0 15px;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 25px rgba(53, 152, 219, .1);
+
+    align-content: flex-start;
+    &__header
+    {
+        display: flex;
+
+        width: 100%;
+        height: 3.75rem;
+
+        border-bottom: 1px solid #ddebf4;
+
+        justify-content: space-between;
+        align-items: center;
+        & h2
+        {
+            font-family: 'LatoBold';
+            font-size: 1rem;
+            font-weight: 700;
+
+            color: #3598db;
+        }
+    }
+}
+.icon-back
+{
+    @include sprite($back);
+    button:hover &,
+    button.active &
+    {
+        @include sprite($back-active);
+    }
+}
+.icon-next
+{
+    @include sprite($next);
+    button:hover &,
+    button.active &
+    {
+        @include sprite($next-active);
+    }
+}
+// @subsection calendar
+.calendar
+{
+    display: flex;
+    overflow: hidden;
+
+    width: 100%;
+    padding-bottom: .625rem;
+
+    border-bottom: 1px solid #ddebf4;
+
+    flex-wrap: wrap;
+    &__top
+    {
+        display: flex;
+
+        width: calc(100% + 30px);
+        height: 3.75rem;
+        margin: 0 -15px;
+        padding-bottom: .625rem;
+
+        justify-content: space-between;
+        align-items: center;
+        & button
+        {
+            display: flex;
+
+            padding: 15px;
+
+            cursor: pointer;
+
+            border: none;
+            outline: none;
+            background-color: transparent;
+
+            align-items: center;
+            justify-content: center;
+        }
+        & .month
+        {
+            font-family: 'Lato';
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2.8125rem;
+
+            text-align: center;
+
+            color: #34495e;
+        }
+    }
+    &__days
+    {
+        display: flex;
+
+        width: 100%;
+        margin: 5px 0 15px 0;
+
+        justify-content: space-around;
+        & .day
+        {
+            font-family: 'Lato';
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+
+            display: inline;
+
+            width: 1rem;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #8ea1b4;
+        }
+    }
+    &__dates
+    {
+        display: flex;
+
+        width: 100%;
+
+        justify-content: space-around;
+        flex-wrap: wrap;
+        & .date
+        {
+            font-family: 'Lato';
+            font-size: .875rem;
+
+            position: relative;
+
+            display: flex;
+
+            width: 14.25%;
+            height: 30px;
+
+            cursor: pointer;
+            text-transform: uppercase;
+
+            color: #8ea1b4;
+
+            justify-content: center;
+            & span
+            {
+                line-height: 30px;
+
+                display: inline;
+
+                width: 30px;
+
+                text-align: center;
+
+                border-radius: 50%;
+            }
+            &--disabled
+            {
+                cursor: default;
+
+                color: #c9d6df;
+            }
+            &--active
+            {
+                color: white;
+                & span
+                {
+                    position: relative;
+                    z-index: 20;
+
+                    background-color: #3598db;
+                    box-shadow: 0 3px 15px rgba(53, 152, 219, .5);
+                }
+            }
+            &--active + .date--active
+            {
+                background-color: #3598db;
+                & span
+                {
+                    border-radius: 0 50% 50% 0;
+                }
+                &::before
+                {
+                    position: absolute;
+                    z-index: 10;
+                    top: 0;
+                    left: -50%;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: '';
+
+                    background-color: #3598db;
+                    box-shadow: 0 3px 15px rgba(53, 152, 219, .5);
+                }
+            }
+            &--active + .date:not(.date--active)
+            {
+                &::before
+                {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: -50%;
+
+                    width: 50%;
+                    height: 100%;
+
+                    content: '';
+
+                    background-color: white;
+                }
+            }
+            &--current
+            {
+                &::after
+                {
+                    position: absolute;
+                    bottom: 0;
+                    left: calc(50% - 4px);
+
+                    display: block;
+
+                    width: 8px;
+                    height: 8px;
+
+                    content: '';
+
+                    border-radius: 50%;
+                    background-color: #51dacf;
+                    box-shadow: 0 2px 4px #51dacf;
+                }
+            }
+        }
+    }
+}
+// @subsection tasklist
+.tasklist
+{
+    display: flex;
+    overflow-x: visible;
+    overflow-y: auto;
+
+    width: calc(100% + 20px);
+    height: 10vh;
+    height: 1px;
+    margin: 0 -10px 0;
+    padding: 18px 10px 0;
+
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start;
+    & .task
+    {
+        display: flex;
+
+        width: 100%;
+        margin-top: .5rem;
+
+        flex-wrap: wrap;
+        &__date
+        {
+            font-family: 'LatoBold';
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.4rem;
+
+            width: 100%;
+
+            letter-spacing: -1px;
+
+            color: #34495e;
+        }
+        &__description
+        {
+            font-family: 'Lato';
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.4rem;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+            letter-spacing: -1px;
+            text-overflow: ellipsis;
+
+            color: #8ea1b4;
+        }
+    }
+}
+// @subsection add-new-tast/agenda
+.add-new-agenda
+{
+    font-family: 'Lato';
+    font-size: .875rem;
+    font-weight: 900;
+    line-height: 1.5rem;
+
+    position: relative;
+    z-index: 20;
+
+    display: inline-block;
+
+    width: calc(100% + 30px);
+    height: 3.75rem;
+    margin: 0 -15px;
+
+    cursor: pointer;
+    transition: .4s;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #3598db;
+    border: none;
+    border-top: 1px solid #ddebf4;
+    outline: none;
+    background-color: #edf0f2;
+    background-color: transparent;
+    &:hover
+    {
+        color: #edf0f2;
+        background-color: #3598db;
+    }
+    &::before
+    {
+        position: absolute;
+        z-index: 10;
+        top: -36px;
+        left: 0;
+
+        width: 100%;
+        height: 35px;
+
+        content: '';
+
+        background-image: linear-gradient(to top, white 0%, transparent 100%);
+    }
+}

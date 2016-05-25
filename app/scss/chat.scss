@@ -1,0 +1,299 @@
+// @section CHAT
+.chat
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 41%;
+    margin: 20px 2% 20px 0;
+
+    background: transparent;
+
+    flex-grow: 2;
+    & .chat__header
+    {
+        display: flex;
+
+        width: 100%;
+        height: 3.75rem;
+
+        border-bottom: 1px solid #ddebf4;
+
+        justify-content: space-between;
+        align-items: center;
+        & .interlocutor
+        {
+            display: flex;
+
+            width: 50%;
+
+            align-items: baseline;
+        }
+        & h2
+        {
+            font-family: 'LatoBold';
+            font-size: 1rem;
+            font-weight: 700;
+
+            color: #3598db;
+            color: #16315c;
+        }
+        & .available
+        {
+            width: 10px;
+            height: 10px;
+            margin: 11px;
+        }
+    }
+}
+.controls
+{
+    display: flex;
+
+    width: 50%;
+
+    justify-content: flex-end;
+    align-items: center;
+    & button
+    {
+        display: flex;
+
+        padding: .9375rem;
+
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        align-items: center;
+        justify-content: center;
+        &:last-child
+        {
+            padding-right: .625rem;
+
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.icon-call
+{
+    @include sprite($call);
+    button:hover &,
+    button.active &
+    {
+        @include sprite($call-active);
+    }
+}
+.icon-videocall
+{
+    @include sprite($videocall);
+    button:hover &,
+    button.active &
+    {
+        @include sprite($videocall-active);
+    }
+}
+.icon-menu
+{
+    @include sprite($menu);
+    button:hover &,
+    button.active &
+    {
+        @include sprite($menu-active);
+    }
+}
+
+.chat__messages
+{
+    display: flex;
+    overflow-x: visible;
+    overflow-y: auto;
+
+    width: 100%;
+    height: 50vh;
+
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start;
+    align-items: flex-start;
+    & .message
+    {
+        display: flex;
+
+        width: 100%;
+        margin-top: 10px;
+
+        align-items: flex-start;
+        align-content: center;
+        &:first-child
+        {
+            margin-top: 16px;
+        }
+        & .message-text
+        {
+            font-family: 'Lato';
+            font-size: .75rem;
+            line-height: 1.25rem;
+
+            position: relative;
+
+            max-width: 63%;
+            min-height: 40px;
+            margin-left: 1.65rem;
+            padding: 10px;
+
+            color: #8ea1b4;
+            border-radius: 20px;
+            background-color: #fff;
+            &::before
+            {
+                position: absolute;
+                z-index: -9999;
+                top: 13px;
+                left: -6px;
+
+                width: 30px;
+                height: 14px;
+
+                content: '';
+
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        &.message--my
+        {
+            flex-direction: row-reverse;
+            & .message-text
+            {
+                margin-right: 1.65rem;
+
+                color: #fefefe;
+                background-color: #3598db;
+                &::before
+                {
+                    left: calc(100% - 24px);
+
+                    background-color: #3598db;
+                }
+            }
+        }
+    }
+}
+// @subsection write new message 
+.write-message
+{
+    display: flex;
+
+    width: 100%;
+    height: 3.75rem;
+
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(53, 152, 219, .05);
+
+    align-items: center;
+    justify-content: flex-end;
+    & textarea
+    {
+        font-family: 'Lato';
+        font-size: .75rem;
+
+        display: inline;
+        overflow: hidden;
+
+        height: 3.75rem;
+        margin-right: 15px;
+        padding: 1.25rem;
+
+        resize: none;
+        vertical-align: middle;
+
+        border: none;
+        border-radius: 5px;
+
+        flex-grow: 2;
+        &:focus
+        {
+            outline: none;
+        }
+    }
+    & #file-input-label
+    {
+        position: relative;
+
+        cursor: pointer;
+
+        @include sprite($attach);
+        &:hover
+        {
+            @include sprite($attach-active);
+        }
+        &:after
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            content: '';
+            &:focus
+            {
+                outline: none;
+            }
+        }
+        &:focus
+        {
+            outline: none;
+        }
+        & #file-input-input
+        {
+            width: 0;
+            height: 0;
+            &:focus
+            {
+                outline: none;
+            }
+        }
+    }
+    & button[type='submit']
+    {
+        position: relative;
+
+        display: flex;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: .94rem;
+
+        cursor: pointer;
+        transition: .4s;
+
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        background-color: #3598db;
+        box-shadow: 0 3px 15px rgba(53, 152, 219, .3);
+
+        align-items: center;
+        justify-content: center;
+        & i.icon-send
+        {
+            @include sprite($send);
+        }
+        &:focus
+        {
+            outline: none;
+        }
+        &:hover
+        {
+            box-shadow: none;
+        }
+    }
+}

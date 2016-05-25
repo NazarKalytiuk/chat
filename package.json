@@ -1,0 +1,29 @@
+{
+  "name": "chat",
+  "version": "0.0.1",
+  "description": "chat for uawebchallenge",
+  "keywords": [
+    "chat",
+    "uawebchallenge",
+    "frontend"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uncss": "^1.0.5",
+    "gulp-useref": "^3.0.8",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^4.2.2",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {}
+}

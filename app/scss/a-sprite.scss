@@ -1,0 +1,338 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$attach-active-name: 'attach-active';
+$attach-active-x: 0px;
+$attach-active-y: 353px;
+$attach-active-offset-x: 0px;
+$attach-active-offset-y: -353px;
+$attach-active-width: 11px;
+$attach-active-height: 22px;
+$attach-active-total-width: 23px;
+$attach-active-total-height: 441px;
+$attach-active-image: 'sprite.png';
+$attach-active: (0px, 353px, 0px, -353px, 11px, 22px, 23px, 441px, 'sprite.png', 'attach-active', );
+$attach-name: 'attach';
+$attach-x: 0px;
+$attach-y: 287px;
+$attach-offset-x: 0px;
+$attach-offset-y: -287px;
+$attach-width: 11px;
+$attach-height: 22px;
+$attach-total-width: 23px;
+$attach-total-height: 441px;
+$attach-image: 'sprite.png';
+$attach: (0px, 287px, 0px, -287px, 11px, 22px, 23px, 441px, 'sprite.png', 'attach', );
+$back-active-name: 'back-active';
+$back-active-x: 0px;
+$back-active-y: 227px;
+$back-active-offset-x: 0px;
+$back-active-offset-y: -227px;
+$back-active-width: 11px;
+$back-active-height: 20px;
+$back-active-total-width: 23px;
+$back-active-total-height: 441px;
+$back-active-image: 'sprite.png';
+$back-active: (0px, 227px, 0px, -227px, 11px, 20px, 23px, 441px, 'sprite.png', 'back-active', );
+$back-name: 'back';
+$back-x: 0px;
+$back-y: 247px;
+$back-offset-x: 0px;
+$back-offset-y: -247px;
+$back-width: 11px;
+$back-height: 20px;
+$back-total-width: 23px;
+$back-total-height: 441px;
+$back-image: 'sprite.png';
+$back: (0px, 247px, 0px, -247px, 11px, 20px, 23px, 441px, 'sprite.png', 'back', );
+$call-active-name: 'call-active';
+$call-active-x: 0px;
+$call-active-y: 110px;
+$call-active-offset-x: 0px;
+$call-active-offset-y: -110px;
+$call-active-width: 17px;
+$call-active-height: 19px;
+$call-active-total-width: 23px;
+$call-active-total-height: 441px;
+$call-active-image: 'sprite.png';
+$call-active: (0px, 110px, 0px, -110px, 17px, 19px, 23px, 441px, 'sprite.png', 'call-active', );
+$call-name: 'call';
+$call-x: 0px;
+$call-y: 129px;
+$call-offset-x: 0px;
+$call-offset-y: -129px;
+$call-width: 17px;
+$call-height: 19px;
+$call-total-width: 23px;
+$call-total-height: 441px;
+$call-image: 'sprite.png';
+$call: (0px, 129px, 0px, -129px, 17px, 19px, 23px, 441px, 'sprite.png', 'call', );
+$chart-active-name: 'chart-active';
+$chart-active-x: 0px;
+$chart-active-y: 375px;
+$chart-active-offset-x: 0px;
+$chart-active-offset-y: -375px;
+$chart-active-width: 22px;
+$chart-active-height: 22px;
+$chart-active-total-width: 23px;
+$chart-active-total-height: 441px;
+$chart-active-image: 'sprite.png';
+$chart-active: (0px, 375px, 0px, -375px, 22px, 22px, 23px, 441px, 'sprite.png', 'chart-active', );
+$chart-name: 'chart';
+$chart-x: 0px;
+$chart-y: 397px;
+$chart-offset-x: 0px;
+$chart-offset-y: -397px;
+$chart-width: 22px;
+$chart-height: 22px;
+$chart-total-width: 23px;
+$chart-total-height: 441px;
+$chart-image: 'sprite.png';
+$chart: (0px, 397px, 0px, -397px, 22px, 22px, 23px, 441px, 'sprite.png', 'chart', );
+$chat-active-name: 'chat-active';
+$chat-active-x: 0px;
+$chat-active-y: 5px;
+$chat-active-offset-x: 0px;
+$chat-active-offset-y: -5px;
+$chat-active-width: 23px;
+$chat-active-height: 16px;
+$chat-active-total-width: 23px;
+$chat-active-total-height: 441px;
+$chat-active-image: 'sprite.png';
+$chat-active: (0px, 5px, 0px, -5px, 23px, 16px, 23px, 441px, 'sprite.png', 'chat-active', );
+$chat-name: 'chat';
+$chat-x: 0px;
+$chat-y: 21px;
+$chat-offset-x: 0px;
+$chat-offset-y: -21px;
+$chat-width: 23px;
+$chat-height: 16px;
+$chat-total-width: 23px;
+$chat-total-height: 441px;
+$chat-image: 'sprite.png';
+$chat: (0px, 21px, 0px, -21px, 23px, 16px, 23px, 441px, 'sprite.png', 'chat', );
+$dropdown-name: 'dropdown';
+$dropdown-x: 0px;
+$dropdown-y: 0px;
+$dropdown-offset-x: 0px;
+$dropdown-offset-y: 0px;
+$dropdown-width: 10px;
+$dropdown-height: 5px;
+$dropdown-total-width: 23px;
+$dropdown-total-height: 441px;
+$dropdown-image: 'sprite.png';
+$dropdown: (0px, 0px, 0px, 0px, 10px, 5px, 23px, 441px, 'sprite.png', 'dropdown', );
+$home-active-name: 'home-active';
+$home-active-x: 0px;
+$home-active-y: 419px;
+$home-active-offset-x: 0px;
+$home-active-offset-y: -419px;
+$home-active-width: 23px;
+$home-active-height: 22px;
+$home-active-total-width: 23px;
+$home-active-total-height: 441px;
+$home-active-image: 'sprite.png';
+$home-active: (0px, 419px, 0px, -419px, 23px, 22px, 23px, 441px, 'sprite.png', 'home-active', );
+$home-name: 'home';
+$home-x: 0px;
+$home-y: 331px;
+$home-offset-x: 0px;
+$home-offset-y: -331px;
+$home-width: 23px;
+$home-height: 22px;
+$home-total-width: 23px;
+$home-total-height: 441px;
+$home-image: 'sprite.png';
+$home: (0px, 331px, 0px, -331px, 23px, 22px, 23px, 441px, 'sprite.png', 'home', );
+$menu-active-name: 'menu-active';
+$menu-active-x: 0px;
+$menu-active-y: 91px;
+$menu-active-offset-x: 0px;
+$menu-active-offset-y: -91px;
+$menu-active-width: 5px;
+$menu-active-height: 19px;
+$menu-active-total-width: 23px;
+$menu-active-total-height: 441px;
+$menu-active-image: 'sprite.png';
+$menu-active: (0px, 91px, 0px, -91px, 5px, 19px, 23px, 441px, 'sprite.png', 'menu-active', );
+$menu-name: 'menu';
+$menu-x: 0px;
+$menu-y: 148px;
+$menu-offset-x: 0px;
+$menu-offset-y: -148px;
+$menu-width: 5px;
+$menu-height: 19px;
+$menu-total-width: 23px;
+$menu-total-height: 441px;
+$menu-image: 'sprite.png';
+$menu: (0px, 148px, 0px, -148px, 5px, 19px, 23px, 441px, 'sprite.png', 'menu', );
+$next-active-name: 'next-active';
+$next-active-x: 0px;
+$next-active-y: 167px;
+$next-active-offset-x: 0px;
+$next-active-offset-y: -167px;
+$next-active-width: 11px;
+$next-active-height: 20px;
+$next-active-total-width: 23px;
+$next-active-total-height: 441px;
+$next-active-image: 'sprite.png';
+$next-active: (0px, 167px, 0px, -167px, 11px, 20px, 23px, 441px, 'sprite.png', 'next-active', );
+$next-name: 'next';
+$next-x: 0px;
+$next-y: 187px;
+$next-offset-x: 0px;
+$next-offset-y: -187px;
+$next-width: 11px;
+$next-height: 20px;
+$next-total-width: 23px;
+$next-total-height: 441px;
+$next-image: 'sprite.png';
+$next: (0px, 187px, 0px, -187px, 11px, 20px, 23px, 441px, 'sprite.png', 'next', );
+$search-name: 'search';
+$search-x: 0px;
+$search-y: 309px;
+$search-offset-x: 0px;
+$search-offset-y: -309px;
+$search-width: 22px;
+$search-height: 22px;
+$search-total-width: 23px;
+$search-total-height: 441px;
+$search-image: 'sprite.png';
+$search: (0px, 309px, 0px, -309px, 22px, 22px, 23px, 441px, 'sprite.png', 'search', );
+$send-name: 'send';
+$send-x: 0px;
+$send-y: 37px;
+$send-offset-x: 0px;
+$send-offset-y: -37px;
+$send-width: 21px;
+$send-height: 18px;
+$send-total-width: 23px;
+$send-total-height: 441px;
+$send-image: 'sprite.png';
+$send: (0px, 37px, 0px, -37px, 21px, 18px, 23px, 441px, 'sprite.png', 'send', );
+$settings-active-name: 'settings-active';
+$settings-active-x: 0px;
+$settings-active-y: 55px;
+$settings-active-offset-x: 0px;
+$settings-active-offset-y: -55px;
+$settings-active-width: 19px;
+$settings-active-height: 18px;
+$settings-active-total-width: 23px;
+$settings-active-total-height: 441px;
+$settings-active-image: 'sprite.png';
+$settings-active: (0px, 55px, 0px, -55px, 19px, 18px, 23px, 441px, 'sprite.png', 'settings-active', );
+$settings-name: 'settings';
+$settings-x: 0px;
+$settings-y: 73px;
+$settings-offset-x: 0px;
+$settings-offset-y: -73px;
+$settings-width: 19px;
+$settings-height: 18px;
+$settings-total-width: 23px;
+$settings-total-height: 441px;
+$settings-image: 'sprite.png';
+$settings: (0px, 73px, 0px, -73px, 19px, 18px, 23px, 441px, 'sprite.png', 'settings', );
+$videocall-active-name: 'videocall-active';
+$videocall-active-x: 0px;
+$videocall-active-y: 267px;
+$videocall-active-offset-x: 0px;
+$videocall-active-offset-y: -267px;
+$videocall-active-width: 18px;
+$videocall-active-height: 20px;
+$videocall-active-total-width: 23px;
+$videocall-active-total-height: 441px;
+$videocall-active-image: 'sprite.png';
+$videocall-active: (0px, 267px, 0px, -267px, 18px, 20px, 23px, 441px, 'sprite.png', 'videocall-active', );
+$videocall-name: 'videocall';
+$videocall-x: 0px;
+$videocall-y: 207px;
+$videocall-offset-x: 0px;
+$videocall-offset-y: -207px;
+$videocall-width: 18px;
+$videocall-height: 20px;
+$videocall-total-width: 23px;
+$videocall-total-height: 441px;
+$videocall-image: 'sprite.png';
+$videocall: (0px, 207px, 0px, -207px, 18px, 20px, 23px, 441px, 'sprite.png', 'videocall', );
+$spritesheet-width: 23px;
+$spritesheet-height: 441px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($attach-active, $attach, $back-active, $back, $call-active, $call, $chart-active, $chart, $chat-active, $chat, $dropdown, $home-active, $home, $menu-active, $menu, $next-active, $next, $search, $send, $settings-active, $settings, $videocall-active, $videocall, );
+$spritesheet: (23px, 441px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

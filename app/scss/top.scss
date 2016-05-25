@@ -1,0 +1,261 @@
+// @section top
+.top
+{
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 4.375rem;
+
+    background-color: #3498db;
+    box-shadow: 0 5px 30px rgba(52, 152, 219, .4);
+
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger
+{
+    position: relative;
+
+    display: flex;
+
+    width: 1.5625rem;
+    height: 1.19rem;
+    margin: 0 1.6%;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    &__inner
+    {
+        position: relative;
+
+        width: 1.125rem;
+        height: 3px;
+
+        transition: .4s;
+
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        background-color: #fff;
+    }
+    &::before
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 1.563rem;
+        height: 3px;
+
+        content: '';
+        transition: .4s;
+
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    &::after
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 1.563rem;
+        height: 3px;
+
+        content: '';
+        transition: .4s;
+
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    &:focus,
+    &:hover
+    {
+        cursor: pointer;
+        & .hamburger__inner
+        {
+            width: 1.563rem;
+        }
+        &:before
+        {
+            top: 2px;
+            left: -2px;
+
+            width: 1.13rem;
+
+            transform: rotate(-45deg);
+        }
+        &:after
+        {
+            bottom: 2px;
+            left: -2px;
+
+            width: 1.13rem;
+
+            transform: rotate(45deg);
+        }
+    }
+}
+// @subsection top-right
+.top__useraccount
+{
+    display: flex;
+
+    width: 100%;
+    margin-right: 6.95%;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+.search
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 22px;
+    width: 25vw;
+    height: 26px;
+
+    justify-content: flex-start;
+    &__input
+    {
+        font-size: .75rem;
+
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+
+        display: flex;
+
+        width: 22px;
+        height: 26px;
+        padding: 5px;
+
+        cursor: pointer;
+        transition: .4s;
+
+        opacity: 0;
+        border: none;
+        border-radius: 2px;
+        background-color: transparent;
+        &:focus
+        {
+            width: 100%;
+
+            cursor: text;
+
+            opacity: 1;
+            background-color: #fff;
+        }
+    }
+    &__icon
+    {
+        position: absolute;
+        z-index: 1;
+        top: 2px;
+        right: 0;
+
+        @include sprite($search);
+    }
+}
+.account
+{
+    position: relative;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    &__photo
+    {
+        margin: 0 26px 0 20px;
+    }
+    &__description
+    {
+        display: flex;
+
+        width: 7.8125rem;
+
+        flex-wrap: wrap;
+        & .name
+        {
+            font-family: 'LatoBold';
+            font-size: .9375rem;
+            font-weight: 400;
+
+            display: inline;
+
+            width: 100%;
+
+            letter-spacing: .5px;
+
+            color: #f6fafe;
+        }
+        & .status
+        {
+            font-family: 'Lato';
+            font-size: .75rem;
+            font-weight: 400;
+
+            position: relative;
+
+            display: flex;
+
+            width: 100%;
+
+            opacity: .5;
+            color: #2775a9;
+            & select
+            {
+                font-size: .75rem;
+
+                z-index: 1;
+
+                width: 100%;
+
+                cursor: pointer;
+                text-indent: .01px;
+                letter-spacing: 1.5px;
+                text-overflow: '';
+
+                opacity: .7;
+                border: none;
+                outline: none;
+                background: transparent;
+                // @valid false
+
+                appearance: none;
+                & option
+                {
+                    color: #424242;
+                }
+                // @css-for IE
+                &::-ms-expand
+                {
+                    display: none;
+                }
+            }
+            // @bugfix a standart icon is visible
+            // @affected IE
+            & .icon-dropdown
+            {
+                position: absolute;
+                z-index: 200;
+                top: .4375rem;
+                right: .4375rem;
+
+                @include sprite($dropdown);
+            }
+        }
+    }
+}
